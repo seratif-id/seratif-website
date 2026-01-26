@@ -1,26 +1,114 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Base - Warm Off-White */
+  --background: #FCF9F5; 
+  
+  /* Text - Deep Corporate Teal (Instead of Black/Gray) */
+  --foreground: #0E2A35; 
+  
+  /* Brand Colors - Refined for Harmony */
+  --primary: #2579B2;    /* Trust/Technology Blue */
+  --primary-dark: #1A5F8E;
+  
+  --secondary: #2F9684;  /* Eco-Teal */
+  --secondary-light: #57B578; /* Fresh Green */
+  
+  --accent: #1EADDC;     /* Cyan Highlight */
+  
+  /* Surfaces */
+  --surface: #FFFFFF;
+  --surface-hover: #F8FAFC;
+  
+  /* Glassmorphism Bases */
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(37, 121, 178, 0.1);
+  --glass-blur: 12px;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Custom Utilities for Glassmorphism & Glows */
+@layer utilities {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 25px rgba(37, 121, 178, 0.2);
+  }
+
+  .blob-bg {
+    display: none;
+  }
+}
+
+/* Animations using standard CSS since Tailwind 4 theme configuration is different */
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 0.8s ease-out;
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
 }
