@@ -21,7 +21,7 @@ export const LocationSection = () => {
                 </div>
                 <div>
                     <h4 className="font-bold text-foreground">Seratif Tower</h4>
-                    <p>Jl. Jenderal Sudirman No. Kav 52-53,<br/>Senayan, Kebayoran Baru, Jakarta Selatan,<br/>DKI Jakarta 12190</p>
+                    <p>Jl. Sariwangi No. 21,<br/>Sariwangi, Parongpong, Bandung Barat,<br/>Jawa Barat 40559</p>
                 </div>
               </div>
               
@@ -33,17 +33,23 @@ export const LocationSection = () => {
                 </div>
                 <div>
                    <h4 className="font-bold text-foreground">Email Us</h4>
-                   <p>hello@seratif.id</p>
+                   <p>anasera.digital@gmail.com</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="h-96 bg-slate-100 rounded-3xl overflow-hidden relative shadow-lg">
-             {/* Map Placeholder */}
-             <div className="absolute inset-0 flex items-center justify-center bg-slate-200">
-                <Typography variant="h3" className="text-slate-400">Map Integration</Typography>
-             </div>
+             <iframe 
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.201625966453!2d107.57140437573886!3d-6.866418893132174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6b91122d647%3A0x6b77215286241b77!2sJl.%20Sariwangi%20No.21%2C%20Sariwangi%2C%20Kec.%20Parongpong%2C%20Kabupaten%20Bandung%20Barat%2C%20Jawa%20Barat%2040559!5e0!3m2!1sen!2sid!4v1706371234567!5m2!1sen!2sid" 
+               width="100%" 
+               height="100%" 
+               style={{ border: 0 }} 
+               allowFullScreen 
+               loading="lazy" 
+               referrerPolicy="no-referrer-when-downgrade"
+               className="grayscale hover:grayscale-0 transition-all duration-700"
+             ></iframe>
           </div>
         </div>
       </Container>
