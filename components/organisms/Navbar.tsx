@@ -178,7 +178,7 @@ export const Navbar = () => {
           title="Back to Top"
         >
           <ArrowUp className="w-6 h-6" />
-          <span className="absolute right-14 top-1/2 -translate-y-1/2 px-2 py-1 bg-primary-dark text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-md">
+          <span className="absolute right-14 top-1/2 -translate-y-1/2 px-2 py-1 bg-primary-dark text-gray-600 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-md">
             Top
           </span>
         </button>
