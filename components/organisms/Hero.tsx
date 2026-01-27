@@ -25,7 +25,7 @@ export const Hero = () => {
         </Typography>
 
         <Typography variant="body" className="mb-10 max-w-2xl mx-auto text-xl text-foreground/70">
-          We are <span className="text-primary font-bold">Seratif</span>. A forward-thinking corporation dedicated to building stunning apps and websites while championing sustainability.
+          We are <span className="text-primary font-bold">Serative</span>. A forward-thinking corporation dedicated to building stunning apps and websites while championing sustainability.
         </Typography>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
