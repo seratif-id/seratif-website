@@ -20,8 +20,8 @@ export const LocationSection = () => {
                     </svg>
                 </div>
                 <div>
-                    <h4 className="font-bold text-foreground">Seratif Tower</h4>
-                    <p>Jl. Sariwangi No. 21,<br/>Sariwangi, Parongpong, Bandung Barat,<br/>Jawa Barat 40559</p>
+                    <h4 className="font-bold text-foreground">Address</h4>
+                    <p>Jl. Mekarwangi No. 21,<br/>Sariwangi, Parongpong, Bandung Barat,<br/>Jawa Barat 40559</p>
                 </div>
               </div>
               
