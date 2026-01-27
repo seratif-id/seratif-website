@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container } from '../atoms/Container';
 import { Typography } from '../atoms/Typography';
 

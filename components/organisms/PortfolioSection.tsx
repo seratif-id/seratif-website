@@ -2,13 +2,7 @@ import React from 'react';
 import { Container } from '../atoms/Container';
 import { Typography } from '../atoms/Typography';
 import { Button } from '../atoms/Button';
-
-const projects = [
-  { title: 'EcoTrack', category: 'Mobile App', color: 'bg-emerald-100' },
-  { title: 'FinFlow', category: 'Web Platform', color: 'bg-blue-100' },
-  { title: 'HealthHub', category: 'Healthcare', color: 'bg-cyan-100' },
-  { title: 'EduLearn', category: 'LMS Platform', color: 'bg-teal-100' },
-];
+import {projects} from "@/constants/projects"
 
 export const PortfolioSection = () => {
   return (
