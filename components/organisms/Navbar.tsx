@@ -200,8 +200,8 @@ export const Navbar = () => {
       
       {/* Persistent Logo */}
       <div 
-        className={`fixed top-6 left-6 z-50 transition-all duration-500 ${
-            isScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
+        className={`w-full fixed pt-6 top-0 pl-6 left-0 z-50 transition-all duration-500 ${
+            isScrolled ? 'opacity-100 translate-y-0  glass' : 'opacity-0 -translate-y-4 pointer-events-none'
         }`}
       >
           <div className="scale-75 origin-top-left cursor-pointer drop-shadow-md" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
