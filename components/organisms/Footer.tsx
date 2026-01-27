@@ -36,7 +36,7 @@ export const Footer = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-primary/5 text-center text-foreground/40 text-sm">
-          &copy; {new Date().getFullYear()} Seratif Corp. All rights reserved.
+          &copy; {new Date('2025').getFullYear()} Seratif Corp. All rights reserved.
         </div>
       </Container>
     </footer>
