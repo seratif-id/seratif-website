@@ -13,8 +13,8 @@ export const AboutSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2 relative">
             <div className="relative z-10 p-2 rounded-2xl bg-white shadow-2xl skew-y-3 transform transition-transform duration-700 hover:skew-y-0">
-              <div className="aspect-video bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center">
-                 <Image src="/about.png" alt="About" fill className="object-cover" />
+              <div className="aspect-video bg-slate-100 rounded-2xl overflow-hidden flex items-center justify-center">
+                 <Image src="/about.png" alt="About" fill className="object-cover rounded-2xl" />
               </div>
             </div>
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-secondary/20 rounded-full blur-3xl" />
@@ -35,12 +35,12 @@ export const AboutSection = () => {
             
             <div className="flex gap-4">
               <div className="flex flex-col">
-                <span className="text-3xl font-bold text-primary">50+</span>
+                <span className="text-3xl font-bold text-primary">20+</span>
                 <span className="text-sm text-foreground/60">Projects Delivered</span>
               </div>
               <div className="w-px h-12 bg-primary/20" />
               <div className="flex flex-col">
-                <span className="text-3xl font-bold text-secondary">4</span>
+                <span className="text-3xl font-bold text-secondary">3</span>
                 <span className="text-sm text-foreground/60">SDGs Championed</span>
               </div>
             </div>
