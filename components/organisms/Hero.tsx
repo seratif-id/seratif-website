@@ -11,7 +11,6 @@ export const Hero = () => {
   }
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Background Ambience */}
       <div className="blob-bg" />
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-20" />
 
