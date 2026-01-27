@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Container } from '../atoms/Container';
 import { Typography } from '../atoms/Typography';
 import { Button } from '../atoms/Button';
@@ -22,9 +23,8 @@ export const PortfolioSection = () => {
           {projects.map((project, idx) => (
             <div key={idx} className="group cursor-pointer">
               <div className={`aspect-video rounded-2xl mb-4 overflow-hidden relative ${project.color}`}>
-                {/* Image Placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl group-hover:scale-105 transition-transform duration-500">
-                  {project.title.charAt(0)}
+                <div className="absolute inset-0 group-hover:scale-105 transition-transform duration-500">
+                  <Image src={project.image} alt={project.title} fill className="object-cover" />
                 </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
               </div>
