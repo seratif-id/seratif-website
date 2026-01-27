@@ -1,7 +1,7 @@
 import { Container } from '../atoms/Container';
 import { Typography } from '../atoms/Typography';
-
-const clients = [1, 2, 3, 4, 5, 6];
+import {clients} from "@/constants/clients"
+import Image from 'next/image';
 
 export const ClientsSection = () => {
   return (
@@ -13,10 +13,15 @@ export const ClientsSection = () => {
           </Typography>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center opacity-70">
+        <div className="flex flex-wrap gap-8 items-center justify-center">
           {clients.map((i) => (
-            <div key={i} className="h-12 bg-slate-100 rounded animate-pulse flex items-center justify-center text-xs text-slate-400 font-bold">
-              LOGO {i}
+            <div key={i.name} className="relative w-32 h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+              <Image 
+                src={i.img} 
+                alt={i.name} 
+                fill
+                className="object-contain"
+              />
             </div>
           ))}
         </div>
