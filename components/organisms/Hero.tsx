@@ -1,9 +1,14 @@
+'use client';
+
 import React from 'react';
 import { Container } from '../atoms/Container';
 import { Typography } from '../atoms/Typography';
 import { Button } from '../atoms/Button';
 
 export const Hero = () => {
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  }
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Ambience */}
@@ -25,10 +30,10 @@ export const Hero = () => {
         </Typography>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="w-full sm:w-auto shadow-xl shadow-primary/20">
+          <Button onClick={() => scrollTo("location")} size="lg" className="w-full sm:w-auto shadow-xl shadow-primary/20">
             Start Your Project
           </Button>
-          <Button variant="secondary" size="lg" className="w-full sm:w-auto !bg-white !text-foreground !border-primary/10 hover:!border-primary/30">
+          <Button onClick={() => scrollTo("portfolio")} variant="secondary" size="lg" className="w-full sm:w-auto !bg-white !text-foreground !border-primary/10 hover:!border-primary/30">
             View Our Work
           </Button>
         </div>
