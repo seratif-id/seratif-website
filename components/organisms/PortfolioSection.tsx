@@ -25,8 +25,12 @@ export const PortfolioSection = () => {
               <div className={`aspect-video rounded-2xl mb-4 overflow-hidden relative ${project.color}`}>
                 <div className="absolute inset-0 group-hover:scale-105 transition-transform duration-500">
                   <Image src={project.image} alt={project.title} fill className="object-cover" />
+                  <div className="absolute h-full top-0 left-full group-hover:left-1/2 p-6 bg-black/80 translate-x-full group-hover:translate-x-0 transition-transform duration-500" >
+                    <Typography variant="h3" className="text-white">{project.title}</Typography>
+                    <p className="text-white pt-4">{project.description}</p>
+                  </div>
                 </div>
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
               </div>
               <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{project.title}</h3>
               <p className="text-foreground/60">{project.category}</p>
